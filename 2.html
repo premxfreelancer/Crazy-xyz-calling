@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>fake calling</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+
+    .header {
+      font-size: 50px;
+      text-align: center;
+      background: lightcyan;
+      font-family: 'Oswald', sans-serif;
+      color: blueviolet;
+    }
+
+    * {
+      padding: 0;
+      margin: 0;
+    }
+    
+    #soundImage {
+      position: absolute;
+      top: 50%;
+      left: 0px;
+      z-index: 999;
+      width: 50px;
+      height: auto;
+    }
+    
+    #myVideo {
+      position: relative;
+    }
+    
+    #videoElement {
+      width: 70px;
+      height: auto;
+      position: absolute;
+      top: 225px; 
+      right: 0;
+    }
+    
+  </style>
+</head>
+
+<body>
+  <div class="header">crazy xyz and mr indian hacker calling app</div>
+  <hr style="width: auto; height: 1px; background: black;">
+
+  <img id="soundImage" src="sound.png" onclick="playAudio()" style="cursor: pointer;">
+  
+
+  <audio id="myAudio" src="audio.mp3"></audio>
+
+
+  <video id="myVideo" src="record.mp4" width="100%" autoplay muted></video>
+
+  <video id="videoElement" autoplay></video>
+
+
+
+
+
+  <script>
+    var video = document.getElementById('myVideo');
+    var audio = document.getElementById('myAudio');
+    
+    video.controls = false;
+
+    function playAudio() {
+      audio.play();
+    }
+
+ 
+  </script>
+  
+  
+
+  <script src="main.js"></script>
+  
+</body>
+
+</html>
